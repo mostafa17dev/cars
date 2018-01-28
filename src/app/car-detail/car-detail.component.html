@@ -1,0 +1,15 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>{{car.brand}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="{{car.url}}" alt="Car brand">
+  <mat-card-content>
+      <mat-list role="list">
+          <mat-list-item role="listitem">Country: {{car.country}} </mat-list-item>
+          <mat-list-item role="listitem">Year: {{car.year}} </mat-list-item>
+        </mat-list>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button  [routerLink]="['/cars']">Back</button>
+  </mat-card-actions>
+</mat-card>

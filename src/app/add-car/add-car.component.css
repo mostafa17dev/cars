@@ -1,0 +1,40 @@
+.container{
+    width: 50%;
+    position: relative;
+}
+
+.card{
+    position: absolute;
+    width: 500px;
+    left: 50%;
+    margin-top: 10px;
+}
+
+.form{
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.full-width{
+    width: 100%;
+}
+
+.uploadDiv{
+    margin-bottom: 10px; 
+}
+
+.button{
+    background-color: green;
+}
+
+.progress span{
+    display: inline-block;
+    width: 14%;
+    color: gray;
+}
+
+.progress mat-progress-bar{
+    display: inline-block;
+    width: 85%;
+}

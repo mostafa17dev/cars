@@ -1,0 +1,12 @@
+.card {
+    width: 400px;
+    margin-top: 5px;
+  }
+  
+  .card mat-card-content{
+      margin-bottom: 0px;
+  }
+  
+  .mat-list{
+      padding-top: 0;
+  }

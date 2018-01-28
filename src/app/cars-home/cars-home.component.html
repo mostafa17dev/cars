@@ -1,0 +1,38 @@
+<div class="container mat-elevation-z8">
+  <button class="button" mat-raised-button color="primary" routerLink="/cars/add">Create a new car</button>
+  <div class="header">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+  </div>
+
+  <mat-table #table [dataSource]="dataSource">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="brand">
+      <mat-header-cell *matHeaderCellDef> Brand </mat-header-cell>
+      <mat-cell class="brandCell" *matCellDef="let element" [routerLink]="['/car', element.$key]"> {{element.brand}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="country">
+      <mat-header-cell *matHeaderCellDef> Country </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.country}} </mat-cell>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="year">
+      <mat-header-cell *matHeaderCellDef> Year </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.year}} </mat-cell>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="delete">
+      <mat-header-cell *matHeaderCellDef> Delete </mat-header-cell>
+      <mat-cell *matCellDef ="let element"> <button mat-raised-button color="warn" (click)="confirmDialog(element.$key)">Delete</button> </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

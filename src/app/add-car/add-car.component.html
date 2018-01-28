@@ -1,0 +1,27 @@
+<div class="container">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>Add a new Car</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="form">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Brand" [(ngModel)]="car.brand" name="brand" required>
+        </mat-form-field>      
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Country" [(ngModel)]="car.country" name="country" required>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Year" [(ngModel)]="car.year" name="year" required>
+        </mat-form-field>
+        <div class="full-width" class="uploadDiv">
+          <input type="file" (change)="handleFile($event)">
+        </div>
+        <button mat-raised-button color="primary" class="button" (click)="saveCar()">Save</button>
+      </form>
+    </mat-card-content>
+    <div class="progress" *ngIf="addCar">
+      <span >progress: </span> <mat-progress-bar  mode="determinate" value="{{addCar?.progress}}"></mat-progress-bar>
+    </div> 
+  </mat-card>
+</div>

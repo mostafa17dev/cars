@@ -1,0 +1,18 @@
+<div class="container">
+  <form #loginForm="ngForm"><br>
+    <mat-form-field>
+      <input matInput type="email" #emailControl="ngModel" required [(ngModel)]="email" name="email" email>
+      <mat-placeholder>
+        <i class="material-icons input-icon">email</i>Email
+      </mat-placeholder>
+    </mat-form-field><br><br>
+    <mat-form-field>
+      <input matInput type="password" #passwordControl="ngModel" required [(ngModel)]="password" name="password">
+      <mat-placeholder >
+        <i class="material-icons input-icon">lock_open</i>Password
+      </mat-placeholder>
+    </mat-form-field><br><br>
+    <button mat-raised-button color="primary" [disabled]="!loginForm.form.valid" type="submit" color="primary" (click)="signIn()">LOGIN</button><br><br>
+    <span class="err"><small>{{errorMessage}}</small></span>
+  </form >
+</div>
