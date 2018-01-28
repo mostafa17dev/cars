@@ -18,7 +18,6 @@ import { appRoutes } from './routes';
 
 import { AppComponent } from './app.component';
 import { LoginFormComponent } from './login-form/login-form.component';
-import { SignupComponent } from './signup/signup.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CarsHomeComponent } from './cars-home/cars-home.component';
 import { CarDetailComponent } from './car-detail/car-detail.component';
@@ -30,7 +29,6 @@ import { ConfirmDeleteComponent } from './confirm-delete/confirm-delete.componen
   declarations: [
     AppComponent,
     LoginFormComponent,
-    SignupComponent,
     NavbarComponent,
     CarsHomeComponent,
     CarDetailComponent,

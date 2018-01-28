@@ -4,7 +4,7 @@
 
     <span class="spacer"></span>
     
-    <button *ngIf="!(user|async)?.uid && router.url != '/signup'" mat-button routerLink="/signup">Sign up</button>
+    <!-- <button *ngIf="!(user|async)?.uid && router.url != '/signup'" mat-button routerLink="/signup">Sign up</button> -->
     <button *ngIf="!(user|async)?.uid && router.url != '/login'" mat-button routerLink="/login">Login</button>
     <button *ngIf="(user|async)?.uid" mat-button (click)="logout()">Logout</button>
   </mat-toolbar-row>

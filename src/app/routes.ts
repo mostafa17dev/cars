@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { SignupComponent } from './signup/signup.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { CarsHomeComponent } from './cars-home/cars-home.component';
 import { CarDetailComponent } from './car-detail/car-detail.component';
@@ -8,7 +7,6 @@ import { AuthenticationGuard } from './services/authentication-guard.service';
 
 
 export const appRoutes: Routes = [
-    {path: 'signup', component: SignupComponent},
     {path: 'login', component: LoginFormComponent},
     {path: 'cars', component: CarsHomeComponent, canActivate: [AuthenticationGuard]},
     {path: 'cars/add', component: AddCarComponent, canActivate: [AuthenticationGuard]},
